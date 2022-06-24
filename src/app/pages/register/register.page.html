@@ -1,0 +1,69 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="save"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Alta usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div id="container" class="ion-padding header ion-text-center">
+    <div class="ion-text-center mb-3">
+      <h6></h6>
+    </div>
+  </div>
+  <div id="container" class="ion-padding mt-5">
+    <form #form="ngForm" (ngSubmit)="register(form)">
+      <div>
+        <h6>INTRODUCE TUS DATOS DE REGISTRO</h6>
+      </div>
+      <div>
+        <div class="form-floating mb-3">
+          <input name="name" type="text" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="surname" type="text" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Apellidos</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="date" type="date" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Fecha nacimiento</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="email" type="email" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating">
+          <input name="password" type="password" class="form-control" id="floatingPassword" required>
+          <label for="floatingPassword">Contraseña</label>
+        </div>
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            He leído y acepto las <a href="https://ivione93.github.io/hoja-mes-policies/" target="_blank" style="text-decoration: none">condiciones de uso</a>
+          </label>
+        </div>
+      </div>
+      <div>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button type="submit" [disabled]="form.invalid" expand="full" shape="round">Guardar</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button (click)="goLogin()" color="dark" expand="full" shape="round">Cancelar</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </form>
+  </div>
+</ion-content>
+

@@ -1,0 +1,26 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="saveCuestas()" shape="round" fill="outline">
+      <ion-icon slot="start" name="save"></ion-icon> Añadir
+    </ion-button>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()"><ion-icon slot="icon-only" name="close"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+
+<ion-content>
+  <div class="ion-padding">
+    <h4>Añadir cuestas</h4>
+    <div class="form-floating mb-2">
+      <input name="times" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Repeticiones</label>
+    </div>
+    <div class="form-floating mb-2">
+      <input name="type" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Tipo</label>
+    </div>
+  </div>
+</ion-content>

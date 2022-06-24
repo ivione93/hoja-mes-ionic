@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="createCompetition()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Competiciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="slides ion-margin-bottom">
+    <ion-searchbar animated></ion-searchbar>
+  </div>
+  <div class="container">
+    <ion-slides [options]="slidesOptions">
+      <ion-slide>
+        <ion-chip outline color="light">
+          <ion-label>Totales <span>13</span></ion-label>
+        </ion-chip>
+      </ion-slide>
+      <ion-slide>
+        <ion-chip>
+          <ion-label>P. Cubierta <span>0</span></ion-label>
+        </ion-chip>
+      </ion-slide>
+      <ion-slide>
+        <ion-chip>
+          <ion-label>Aire Libre <span>6</span></ion-label>
+        </ion-chip>
+      </ion-slide>
+      <ion-slide>
+        <ion-chip>
+          <ion-label>Cross <span>1</span></ion-label>
+        </ion-chip>
+      </ion-slide>
+      <ion-slide>
+        <ion-chip>
+          <ion-label>Ruta <span>6</span></ion-label>
+        </ion-chip>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="container">
+    <h4>Competiciones</h4>
+    <ion-item lines="none" class="mt-3" (click)="showCompetition()" *ngFor="let i of [1,1,1,1,1]">
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="6"><h4 class="ion-text-start">AL</h4></ion-col>
+          <ion-col size="6"><h5 class="ion-text-end">05 JUN. 2022</h5></ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="12"><h4 class="ion-text-start">Campeonato de Madrid absoluto</h4></ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="12"><h5 class="ion-text-start">Vallehermoso, Madrid</h5></ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="4"><h5 class="ion-text-start">Prueba<br>800 ml</h5></ion-col>
+          <ion-col size="8"><h2 class="ion-text-end">02:07.13</h2></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </div>
+</ion-content>

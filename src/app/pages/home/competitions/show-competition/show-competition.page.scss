@@ -1,0 +1,57 @@
+* {
+    font-family: Kdam !important;
+}
+ion-header {
+    ion-toolbar, ion-item {
+      --background: #1976d2;
+      background: #1976d2;
+      color: #FFFFFF;
+    }
+}
+
+ion-content {
+    --background: #FFFFFF;
+    .header {
+        background: #1976d2;
+        padding: 5px 10px 10px 10px;
+        border-radius: 0 0 28px 28px;
+    }
+    h6 {
+        color: #FFFFFF;
+        font-weight: 600;
+    }
+}
+
+.container {
+    padding: 8px 20px;
+    color: #000000;
+    ion-item {
+        color: #000000;
+        background-color: rgba(245,245,245,1);
+        --ion-background-color: rgba(245,245,245,1) !important;
+        .bold {
+            font-weight: 600;
+        }
+    }
+    .track {
+        //color: #1976d2;
+        font-size: 30px;
+        font-weight: 500;
+        //padding: 25px;
+    }
+    .result {
+        color: #1976d2;
+        font-size: 40px;
+        font-weight: 800;
+        padding: 25px;
+    }
+    .cardd {
+        border-radius: 14px;
+    }
+    .card-top {
+        border-radius: 14px 14px 0px 0px;
+    }
+    .card-bottom {
+        border-radius: 0px 0px 14px 14px;
+    }
+}

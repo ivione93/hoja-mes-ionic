@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-button (click)="presentAlertConfirmNoSave()">
+        <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="saveEditProfile()">
+        <ion-icon slot="icon-only" name="save"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div id="container" class="ion-padding header ion-text-center">
+    <div class="ion-text-center mb-3">
+      <!--<h6></h6>-->
+    </div>
+  </div>
+  <div id="container" class="ion-padding">
+    <div class="ion-text-end">
+        <ion-button slot="icon-only" fill="clear" color="dark" (click)="presentActionSheet()">
+          <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+        </ion-button>
+
+    </div>
+    <div class="ion-text-center mb-3">
+      <!--<h6></h6>-->
+      <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/25/25634.png"><br>
+      <ion-chip outline class="mb-3">
+        <ion-label>ivgarciag93@gmail.com</ion-label>
+      </ion-chip>
+    </div>
+    <!--<ion-chip outline class="mb-3">
+      <ion-avatar>
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25634.png">
+      </ion-avatar>
+      <ion-label>ivgarciag93@gmail.com</ion-label>
+    </ion-chip>-->
+    <h4>Datos del perfil</h4>
+    <div class="form-floating mb-3">
+      <input name="name" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Nombre</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input name="surname" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Apellidos</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input name="date" type="date" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Fecha nacimiento</label>
+    </div>
+  </div>
+</ion-content>

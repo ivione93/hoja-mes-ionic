@@ -1,0 +1,26 @@
+* {
+  font-family: Kdam !important;
+}
+ion-header {
+  ion-toolbar, ion-item {
+    --background: #1976d2;
+    background: #1976d2;
+    color: #FFFFFF;
+  }
+}
+
+ion-content {
+  --background: #FFFFFF;
+  .header {
+      background: #1976d2;
+      padding: 5px 10px 10px 10px;
+      border-radius: 0 0 28px 28px;
+  }
+  ion-chip {
+      color: #FFFFFF;
+      border-color: #FFFFFF;
+  }
+  h6 {
+    color: var(--ion-color-hm-dark);
+  }
+}

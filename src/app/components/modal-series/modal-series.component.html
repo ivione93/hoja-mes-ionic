@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="saveSerie()" shape="round" fill="outline">
+      <ion-icon slot="start" name="save"></ion-icon> Añadir
+    </ion-button>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()"><ion-icon slot="icon-only" name="close"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+
+<ion-content>
+  <div class="ion-padding">
+    <h4>Añadir serie</h4>
+    <div class="form-floating mb-2">
+      <input name="distance" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Distancia</label>
+    </div>
+    <div class="form-floating mb-2">
+      <input name="time" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Tiempo</label>
+    </div>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label class="ion-text-start">¿Vallas?</ion-label>
+            <ion-toggle slot="start" name="hurdles"></ion-toggle>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label>¿Arrastres?</ion-label>
+            <ion-toggle slot="start" name="arrastres"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-radio-group value="normal">
+      <ion-list-header>
+        <h5>Zapatillas</h5>
+      </ion-list-header>
+      <ion-item lines="none">
+        <ion-label>Normales</ion-label>
+        <ion-radio slot="start" value="normal"></ion-radio>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>Voladoras</ion-label>
+        <ion-radio slot="start" value="fly"></ion-radio>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>Clavos</ion-label>
+        <ion-radio slot="start" value="spikes"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </div>
+</ion-content>

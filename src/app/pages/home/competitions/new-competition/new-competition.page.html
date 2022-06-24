@@ -1,0 +1,61 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start" (click)="goBack()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="goCompetitions()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Nueva competición</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen scroll-y="false">
+  <div id="container" class="ion-padding header ion-text-center">
+    <div class="ion-text-center mb-3">
+      <h6></h6>
+    </div>
+  </div>
+
+  
+  <div id="container" class="ion-padding">
+    <ion-item lines="none" class="mb-3">
+      <ion-label>Tipo de competición</ion-label>
+      <ion-select interface="popover" placeholder="Selecciona">
+        <ion-select-option value="pc">Pista cubierta</ion-select-option>
+        <ion-select-option value="al">Aire libre</ion-select-option>
+        <ion-select-option value="cross">Cross</ion-select-option>
+        <ion-select-option value="rute">Ruta</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <h4>Datos básicos</h4>
+    <div class="form-floating mb-3">
+      <input name="name" type="date" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Fecha</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input name="place" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Lugar</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input name="name" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Campeonato</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input name="track" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Prueba</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input name="result" type="text" class="form-control" id="floatingInput" required>
+      <label for="floatingInput">Marca</label>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border ion-padding" collapse="fade">
+  <ion-button color="primary" shape="round" expand="full" (click)="saveCompetition()">Guardar</ion-button>
+</ion-footer>

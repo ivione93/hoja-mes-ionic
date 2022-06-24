@@ -1,0 +1,110 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start" (click)="goBack()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="goTrainings()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Nuevo entrenamiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen scroll-y="false">
+  <div id="container" class="ion-padding header ion-text-center">
+    <div class="ion-text-center mb-3">
+      <h6>{{ step }}</h6>
+    </div>
+  </div>
+  <ion-slides pager="false" [options]="slideOpts" #mySlider>
+    <ion-slide class="mt-3">
+      <h4>Datos básicos</h4>
+      <div id="container" class="ion-padding">
+        <div class="form-floating mb-2">
+          <input name="name" type="date" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Fecha</label>
+        </div>
+        <ion-item lines="none" class="mb-2">
+          <ion-label>Tipo de entrenamiento</ion-label>
+          <ion-select interface="popover" placeholder="Selecciona">
+            <ion-select-option value="race">Carrera</ion-select-option>
+            <ion-select-option value="indoor-race">Carrera en cinta</ion-select-option>
+            <ion-select-option value="ciclyng">Ciclismo</ion-select-option>
+            <ion-select-option value="indoor-ciclyng">Ciclismo en sala</ion-select-option>
+            <ion-select-option value="elliptic">Elíptica</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <div class="form-floating mb-3">
+          <input name="time" type="text" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Tiempo</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="distance" type="text" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Distancia</label>
+        </div>
+        <div class="form-floating">
+          <input name="observaciones" type="text" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Observaciones</label>
+        </div>
+      </div>
+    </ion-slide>
+  
+    <ion-slide class="mt-3">
+      <h4>Sesión de entrenamiento</h4>
+      <div id="container">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button expand="block" (click)="showSeries()">
+                <ion-icon slot="start" name="add"></ion-icon>
+                Series
+              </ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button expand="block" (click)="showCuestas()">
+                <ion-icon slot="start" name="add"></ion-icon>
+                Cuestas
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button expand="block" (click)="showGym()">
+                <ion-icon slot="start" name="add"></ion-icon>
+                Gimnasio
+              </ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button expand="block">
+                <ion-icon slot="start" name="add"></ion-icon>
+                Fartlek
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div class="container">
+        <h4>Extras añadidos</h4>
+        <ion-list *ngFor="let i of [1,1,1]">
+          <ion-item lines="none">
+            <ion-label>Series: 200 ml Normales - 25.90</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-list *ngFor="let i of [1,1]">
+          <ion-item lines="none">
+            <ion-label>Cuestas: 6 tierra</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-footer class="ion-no-border ion-padding">
+  <ion-button *ngIf="!inExtras" color="primary" shape="round" fill="outline" expand="full" (click)="swipeNext()">Continuar</ion-button>
+  <ion-button *ngIf="inExtras" color="primary" shape="round" expand="full" (click)="saveTraining()">Guardar</ion-button>
+</ion-footer>

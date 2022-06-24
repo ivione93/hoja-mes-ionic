@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true">
+  <div id="container" class="ion-padding">
+    <center>
+      <ion-img src="https://raw.githubusercontent.com/ivione93/hoja-mes/main/app/src/main/res/drawable/ic_logo.png" class="logo"></ion-img>
+    </center>
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <div>
+        <h6>INICIA SESIÓN PARA CONTINUAR</h6>
+      </div>
+      <div>
+        <div class="form-floating mb-3">
+          <input name="email" type="email" class="form-control" id="floatingInput" required>
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating">
+          <input name="password" type="password" class="form-control" id="floatingPassword" required>
+          <label for="floatingPassword">Contraseña</label>
+        </div>
+      </div>
+      <div class="text-end">
+        <label (click)="recoverPassword()" style="padding: 10px">Recuperar la contraseña</label>
+      </div>
+      <div>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button type="submit" expand="full" shape="round">Entrar</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button (click)="goRegister()" color="dark" expand="full" shape="round">Registrar</ion-button>
+            </ion-col>
+            <ion-col size="12">
+              <ion-button color="light" expand="full" shape="round">Google</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </form>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-text color="dark" class="ion-text-center">
+    <p>Desarrollado por <a href="https://www.linkedin.com/in/iv%C3%A1n-garc%C3%ADa-g%C3%B3mez-a074a483/" target="_blank" style="text-decoration: none">Iván García Gómez</a></p>
+  </ion-text>
+</ion-footer>

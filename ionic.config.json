@@ -1,0 +1,7 @@
+{
+  "name": "Hoja del mes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
