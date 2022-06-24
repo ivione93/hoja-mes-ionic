@@ -6,6 +6,9 @@ ion-header {
         --background: #FFFFFF;
         background: #FFFFFF;
     }
+    ion-item {
+        padding: 0 15px;
+    }
     ion-img {
         height: 80px;
         margin-top: 10px;
@@ -37,7 +40,7 @@ ion-content {
     --background: #1976d2;
     .slides {
         background: #FFFFFF;
-        padding: 4px 10px 10px 10px;
+        padding: 4px 20px 10px 20px;
         border-radius: 0 0 28px 28px;
     }
     ion-card {
